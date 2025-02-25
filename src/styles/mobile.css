@@ -1,0 +1,50 @@
+/* Mobile-first breakpoints */
+@media (max-width: 640px) {
+  .bento-box {
+    border-radius: 12px;
+    padding: 1rem;
+  }
+
+  .glass-effect {
+    border-radius: 12px;
+  }
+
+  .admin-nav-button {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  .admin-nav-button svg {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) {
+  .glass-effect {
+    transition: transform 0.2s ease;
+  }
+
+  .glass-effect:active {
+    transform: scale(0.98);
+  }
+
+  /* Prevent sticky hover states */
+  .hover\:bg-white\/10:hover {
+    background-color: transparent;
+  }
+
+  .hover\:bg-white\/10:active {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Safe area insets for notched devices */
+@supports(padding: max(0px)) {
+  .safe-area-inset {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+}
